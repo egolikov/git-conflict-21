@@ -2,6 +2,8 @@ package guru.qa;
 
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class OpenPageTest {
@@ -10,6 +12,8 @@ public class OpenPageTest {
     public void testExample() {
 
         open("https://www.gismeteo.ru/");
+
+        $(".subnav-menu").$(byText("10 дней")).click();
 
     }
 }
